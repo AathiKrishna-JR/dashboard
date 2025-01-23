@@ -2,17 +2,20 @@
 
   <main>
     <div id="dashboard">
-      <div class="dashboard-item">
-        <app-server />
-      </div>
-  
-      <div class="dashboard-item">
-        <app-traffic />
-      </div>
-  
-      <div class="dashboard-item">
-        <app-tickets />
-      </div>
+      
+        <app-dashboard-item [image]="{src : 'assets/status.png' alt :'asdfsd' }" title= " Server Status" >
+          <app-server />
+        </app-dashboard-item>
+    
+        <app-dashboard-item [image]="{src : 'assets/globe.png' alt :'asdfsd'}" title=" A Globe">
+          <app-traffic />
+        </app-dashboard-item>
+    
+        <app-dashboard-item [image]="{src : 'assets/list.png' alt :'asdfsd'}" title=" A signal Symbol">
+          <app-tickets />
+        <app-dashboard-item>
+      
+        
     </div>
   </main>
   

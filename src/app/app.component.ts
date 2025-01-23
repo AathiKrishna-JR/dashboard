@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
-import { ServerComponent } from './dashoard/server/server.component';
-import { TrafficComponent } from './dashoard/traffic/traffic.component';
-import { TicketsComponent } from './dashoard/tickets/tickets.component';
-import { DashboardItemComponent } from './dashoard/dashboard-item/dashboard-item.component';
+import { ServerComponent } from './dashboard/server/server.component';
+import { TrafficComponent } from './dashboard/traffic/traffic.component';
+import { TicketsComponent } from './dashboard/tickets/tickets.component';
+import { DashboardItemComponent } from './dashboard/dashboard-item/dashboard-item.component';
 
 @Component({
   selector: 'app-root',

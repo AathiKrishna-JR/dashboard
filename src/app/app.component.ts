@@ -10,6 +10,7 @@ import { DashboardItemComponent } from './dashboard/dashboard-item/dashboard-ite
   imports: [HeaderComponent, ServerComponent,TrafficComponent,TicketsComponent,DashboardItemComponent],
   standalone: true,
   templateUrl: './app.component.html',
+  styleUrl : './app.component.css'
 }) 
 export class AppComponent {}
   

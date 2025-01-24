@@ -29,6 +29,6 @@ export class ServerComponent implements OnInit{
         this.currentStatus.set("unknown") ;
       }
       
-    },5000);
+    },2000);
   }
 }

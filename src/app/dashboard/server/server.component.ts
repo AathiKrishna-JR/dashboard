@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, effect, signal } from '@angular/core';
 
 @Component({
   selector: 'app-server',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './server.component.css'
 })
 export class ServerComponent implements OnInit{
-  currentStatus : 'online' | 'offline' | 'unknown' = "online";
+  currentStatus = signal<'online' | 'offline' | 'unknown'>("online");
   
-  constructor(){}
+  constructor(){
+    effect(() => {
+    console.log(this.currentStatus); 
+  })};
 
   ngOnInit(): void {
     
@@ -17,13 +20,13 @@ export class ServerComponent implements OnInit{
       const rnd = Math.random();
       if(rnd < 0.5)
       {
-        this.currentStatus = "offline";
+        this.currentStatus.set('offline');
       }
       else if(rnd < 0.9){
-        this.currentStatus = "online";
+        this.currentStatus.set("online");
       }
       else{
-        this.currentStatus = "unknown";
+        this.currentStatus.set("unknown") ;
       }
       
     },5000);

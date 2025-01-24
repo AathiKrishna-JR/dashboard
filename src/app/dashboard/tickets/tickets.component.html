@@ -2,10 +2,10 @@
    <ul>
         @for(ticket of tickets; track ticket.id){
             <li>
-                <app-ticket></app-ticket>
+                <app-ticket /> - {{$count}}
             </li>
         }   @empty{
-            <p>No ticket</p>
+            <p>No ticket.</p>
         }
    </ul> 
 </div>

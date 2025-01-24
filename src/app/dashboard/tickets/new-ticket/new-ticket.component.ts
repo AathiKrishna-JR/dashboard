@@ -14,7 +14,7 @@ export class NewTicketComponent implements OnInit,AfterViewInit{
   add = output<{title : string; text : string}> ();
  // private form = viewChild<ElementRef<HTMLFormElement>>('form')
   @ViewChild('form') form ?: ElementRef<HTMLFormElement>;
-  onSubmit(title : string, text : string , form : HTMLFormElement){
+  onSubmit(title : string, text : string ){
         this.add.emit({title : title, text : text})
        this.form?.nativeElement.reset();
   }

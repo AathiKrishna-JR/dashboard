@@ -9,12 +9,12 @@ import {
   } from '@angular/core';
   
   @Component({
-  selector: 'app-server-status',
+  selector: 'app-server',
   imports: [],
   templateUrl: './server-status.component.html',
   styleUrl: './server-status.component.css',
   })
-  export class ServerStatusComponent implements OnInit {
+  export class ServerComponent implements OnInit {
   currentStatus = signal<'online' | 'offline' | 'unknown'>('online');
   // private interval?: ReturnType<typeof setInterval>;
   private destroyRef = inject(DestroyRef);

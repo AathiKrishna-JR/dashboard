@@ -21,7 +21,7 @@ export class NewTicketComponent implements OnInit,AfterViewInit{
   @ViewChild('form') form ?: ElementRef<HTMLFormElement>;
 
   onSubmit(title : string, text : string ){
-    if(! this.isEmpty){
+    if(!this.isEmpty){
         this.add.emit({title : this.enteredTitle, text : this.enteredText})
         this.enteredTitle= '';
         this.enteredText = '';
